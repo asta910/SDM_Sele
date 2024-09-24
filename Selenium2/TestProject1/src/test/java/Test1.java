@@ -116,6 +116,5 @@ public class Test1 {
         try{Thread.sleep(2500);}catch (InterruptedException e) {System.out.println(e);}
 
         driver.close();
-
     }
 }

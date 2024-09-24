@@ -1,0 +1,179 @@
+@import url(https://fonts.googleapis.com/css?family=Denk+One);
+
+*{
+    box-sizing: border-box;   
+ 
+}
+
+html{
+    min-height: 100vh;
+}
+
+body{
+    margin: 0;
+    background: radial-gradient(#3D2200,#9D5900);
+}
+
+.gametitle{
+    color:black;
+    font-weight: normal;
+    text-align: center;
+    font-size: 8vh;
+    font-family: 'Denk One', sans-serif;
+}
+
+.game-info{
+    font-family: 'Lunacy', 'Denk One';
+    font-size: 4rem;
+    color: #FFBB89;
+    text-align: center;
+    display: flex;
+    margin: 0rem 10.2rem;
+    align-items: center;
+    margin: opx 30rem;
+}
+
+.game-info-conatiner{
+    text-align: center;
+    display: flex;
+    padding: 0rem 60px;
+    margin-top: 3px;
+    align-items: center ;
+    grid-column: 1/-1;
+    justify-content: space-between;
+}
+
+.game-container {
+    display: flex;
+    grid-template-columns: repeat(7,auto);
+    grid-gap: 5px;
+    margin: 40px;
+    height: 90vh;
+    width: 190vh;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    background-color: red;
+
+}
+.cards{
+    background-color: black;
+    height: 145px;
+    width: 125px;
+    align-items: center;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 3px solid gray;
+    border-radius: 10px;
+}
+
+#cards11{
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(6,auto) ;
+    justify-content: center;
+    padding: 0rem 14rem;
+    grid-gap: 1rem;
+    color: wheat;
+    text-align: center;
+    place-items: center;
+}
+
+.cards:hover{
+    transform: scale(1.15);
+    opacity: .8;
+}
+
+.cards img{
+    height: 135px;
+    width: 105px;
+    align-items: center;
+    margin:auto;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 3px solid gray;
+    border-radius: 10px;
+    opacity: 0;
+    transform: 0.4s all ease;
+}
+
+.cards.clicked{
+    opacity: 1;
+    transform: rotateY('120deg') rotateX('90deg');
+    transform-style: preserve-3d;
+}
+
+.cards.clicked img{
+    opacity: 1;
+    transform: rotateY('120deg') rotateX('90deg');
+    transition: 60ms;
+}
+
+.cards.shake{
+    background-color: #f15f5f;
+    opacity: 1;
+}
+
+.cards.shake img{
+    background-color: #f15f5f;
+    opacity: 1;
+}
+
+.cards.checked{
+    background-image: url(./images/click.jpg);
+    background-size: 100%;
+
+}
+
+.cards.checked img{
+    background-color: lightgreen;
+    opacity: 0;
+    image-resolution: 100%;
+    align-items: center;
+    justify-content: center;
+    opacity: .1;
+}
+
+
+.cards.corr img{
+    background-color: red;
+}
+
+.sec img{
+    opacity: 1;
+    background-color: green;
+}
+
+.overlay-text{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    z-index: 100;
+    font-family: 'Denk One' ;
+    color: #FFBB89;
+}
+
+.overlay-text.visible{
+    display: flex;
+    animation: overlay-grow 500ms forwards;
+}
+
+
+@keyframes overlay-grow {
+    from{
+        background-color: rgba(0, 0, 0, 0);
+        font-size: 0;
+    }
+    to{
+        background-color: rgba(0, 0, 0, 0.8);
+        font-size: 10em;
+    }
+    
+}

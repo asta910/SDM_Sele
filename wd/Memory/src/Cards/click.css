@@ -1,0 +1,28 @@
+@import url(https://fonts.googleapis.com/css?family=Denk+One);
+
+*{
+    box-sizing: border-box;    
+}
+
+html{
+    min-height: 100vh;
+}
+
+body{
+    margin: 0;
+    background: radial-gradient(#b72323,#9a6309);
+}
+
+.click{
+    height: 100vh;
+    margin: auto;
+    padding: 23rem;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    color: black;
+    font-family: 'Denk One', sans-serif;
+    font-weight: bolder;
+    background-image:url(./images/click.jpg) ;
+    background-repeat: no-repeat;
+}
