@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .div-c{
+            display: flex;
+        }
+        img{
+            flex: 1;
+            padding: 3rem;
+        }
+        button{
+            padding: 1rem;
+            margin: 1rem 4rem;
+            flex:1 ;
+            cursor: pointer;
+        }
+        .btns{
+            display: flex;
+        }
+        .out img{
+            flex: 1;
+            padding: 3rem;
+            width: 10rem;
+            height: 11rem;
+        }
+    </style>
+    <div class="div-c">
+        <img src="./images/image1.jpg" alt="" id="im1">
+        <img src="./images/images2.jpg" alt="" id="im2">
+        <img src="./images/images3.jpg" alt="" id="im3">
+        <img src="./images/image4.jpg" alt="" id="im4">
+    </div>
+    <div class="btns">
+        <button class="btn" id="one" >Image 1</button>
+        <button class="btn" id="two" >Image 2</button>
+        <button class="btn" id="three" >Image 3</button>
+        <button class="btn" id="four" >Image 4</button>
+    </div>
+    <div id="out" class="out"></div>
+    <script>
+        var one = document.querySelector('#one');
+        var two = document.querySelector('#two');
+        var three = document.querySelector('#three');
+        var four = document.querySelector('#four');
+
+        one.addEventListener('click',()=>{
+            const img = document.getElementById('im1');
+            const newelement = document.createElement('img');
+            const addre = document.getElementById('out');
+
+            newelement.src = img.src;
+            addre.appendChild(newelement);
+        })
+        two.addEventListener('click',()=>{
+            const img = document.getElementById('im2');
+            const newelement = document.createElement('img');
+            const addre = document.getElementById('out');
+
+            newelement.src = img.src;
+            addre.appendChild(newelement);
+        })
+        three.addEventListener('click',()=>{
+            const img = document.getElementById('im3');
+            const newelement = document.createElement('img');
+            const addre = document.getElementById('out');
+
+            newelement.src = img.src;
+            addre.appendChild(newelement);
+        })
+        four.addEventListener('click',()=>{
+            const img = document.getElementById('im4');
+            const newelement = document.createElement('img');
+            const addre = document.getElementById('out');
+
+            newelement.src = img.src;
+            addre.appendChild(newelement);
+        })
+    </script>
+</body>
+</html>
