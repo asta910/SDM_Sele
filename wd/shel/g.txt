@@ -1,0 +1,97 @@
+#!/bin/sh
+
+# Clone a repository from a remote source
+git clone https://github.com/user/repository.git
+
+# Check the status of the repository
+git status
+
+# Add all changes to staging
+git add .
+
+# Commit changes with a message
+git commit -m "Your commit message"
+
+# Push changes to the remote repository
+git push origin main
+
+# Pull the latest changes from the remote repository
+git pull origin main
+
+# Create a new branch
+git branch new-branch
+
+# Switch to the new branch
+git checkout new-branch
+
+# Merge a branch into the current branch
+git merge new-branch
+
+# Delete a local branch
+git branch -d new-branch
+
+# Fetch changes from the remote repository without merging
+git fetch origin
+
+# Rebase the current branch with the latest changes
+git rebase origin/main
+
+# Show the commit history
+git log
+
+# Show the log in a one-line format
+git log --oneline
+
+# Show detailed information about a commit
+git show commit-hash
+
+# Stash uncommitted changes
+git stash
+
+# Apply stashed changes
+git stash apply
+
+# List all stashes
+git stash list
+
+# Create a new tag
+git tag v1.0
+
+# Push tags to the remote repository
+git push origin --tags
+
+# Remove a local tag
+git tag -d v1.0
+
+# Remove a remote tag
+git push origin --delete tag v1.0
+
+# View the differences between the working directory and the index
+git diff
+
+# View differences between the current branch and the latest commit
+git diff HEAD
+
+# Reset the index and the working directory to the last commit
+git reset --hard
+
+# Reset only the index, keep working directory changes
+git reset --soft HEAD~1
+
+# Remove untracked files from the working directory
+git clean -f
+
+# View the remote repository URL
+git remote -v
+
+# Change the remote repository URL
+git remote set-url origin https://new-url.com/repository.git
+
+# View a graphical representation of the commit history
+git log --graph --oneline --all
+
+# Fetch and rebase all branches from the remote
+git pull --rebase origin main
+
+# Squash multiple commits into one
+git rebase -i HEAD~3

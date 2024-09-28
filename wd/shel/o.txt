@@ -1,0 +1,50 @@
+# Display disk usage of the current directory
+du -sh .
+
+# Show free and used memory
+free -h
+
+# Show all running processes
+ps aux
+
+# Show system uptime and load
+uptime
+
+# Show the first 5 lines of a file
+head -n 5 filename.txt
+
+# Show the last 5 lines of a file
+tail -n 5 filename.txt
+
+# Display the entire file in reverse order (line-wise reverse)
+tac filename.txt
+
+# Display the contents of a file
+cat filename.txt
+
+# Reverse the words in a file (word-wise reverse)
+awk '{for(i=NF;i>0;i--)printf $i " ";print ""}' filename.txt
+
+# Reverse the lines in a file (line-wise reverse without tac)
+awk '{print $0}' filename.txt | awk '{for(i=NF;i>0;i--)printf $i " ";print ""}' | tac
+
+# Reverse each sentence in a file (sentence-wise reverse)
+awk 'BEGIN { RS="\\." ; ORS=". " } { for(i=NF;i>0;i--) printf $i " "; print ""}' filename.txt
+
+# Find specific word occurrences in a file
+grep "word" filename.txt
+
+# Count the number of words in a file
+wc -w filename.txt
+
+# Count the number of lines in a file
+wc -l filename.txt
+
+# Copy a file
+cp source.txt destination.txt
+
+# Move or rename a file
+mv oldname.txt newname.txt
+
+# Delete a file
+rm filename.txt
