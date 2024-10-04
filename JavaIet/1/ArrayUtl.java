@@ -51,7 +51,7 @@ public class ArrayUtl {
 
     // 5. Get Minimum of both arrays
     public static int findMin(int[][] a){
-        int maxNum = Integer.MIN_VALUE;
+        int maxNum = Integer.MAX_VALUE;
         for(int[] row : a){
             for(int i : row){
                 maxNum = Math.min(maxNum,i);
@@ -95,4 +95,15 @@ public class ArrayUtl {
                 System.out.println(i + " ");
             }
         }
+
+        //function to check Symmetry
+        public static boolean checkSym(int[][] a1, int[][] a2){
+            int n1 = a1.length;
+            int n2 = a2.length;
+            int m1 = a1[0].length;
+            int m2 = a2[0].length;
+            return (n1 == n2 && m1 == m2);
+        }
+
+        
 }
